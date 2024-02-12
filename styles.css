@@ -25,12 +25,13 @@
 
 body {
   background-color: #f0f0f0;
+  overflow: hidden;
 }
 
 input {
   border-radius: 5px;
   border: 1px solid #ccc;
-  width: 5rem;
+  width: 100%;
   height: 2.5rem;
   font-family: "Poppins-ExtraBold", sans-serif;
   font-size: 1.5rem;
@@ -47,6 +48,13 @@ label {
 
 img {
   width: 30px;
+}
+
+p {
+  margin: 0;
+  margin-top: 0.5rem;
+  font-family: "Poppins-Italic", sans-serif;
+  font-size: 0.6rem;
 }
 
 .big-text {
@@ -67,7 +75,7 @@ img {
 }
 
 .btn-round {
-  background-color: black;
+  background-color: #874bff;
   color: white;
   border: none;
   padding: 0.8rem;
@@ -75,11 +83,35 @@ img {
 }
 
 .btn-round:hover {
-  background-color: #414141;
+  background-color: #6644e2;
 }
 
 .line {
   width: 100%;
   height: 1px;
   border-top: 1px solid #e2e2e2;
+}
+
+@media (max-width: 600px) {
+  input {
+    font-size: 1rem;
+    padding-left: 0.5rem;
+  }
+  .btn-round {
+    position: absolute;
+    left: calc(50% - 28px);
+  }
+  .big-text {
+    font-size: 3rem;
+  }
+  .line {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .row {
+    width: 90%;
+  }
 }
