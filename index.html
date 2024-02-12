@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -14,36 +12,58 @@
 
     <title>Frontend Mentor | Age calculator app</title>
 
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="d-flex justify-content-center align-items-center vh-100">
       <div class="card">
-        <div class="row">
+        <!-- Input -->
+        <div class="row w-75">
           <div class="col-4">
-            <label for="">Day</label>
-            <input type="number" name="day" id="day" />
+            <label for="day">DAY</label>
+            <input maxlength="2" name="day" id="day" />
           </div>
+
           <div class="col-4">
-            <label for="month">Month</label>
-            <input type="number" name="month" id="month" />
+            <label for="month">MONTH</label>
+            <input maxlength="2" name="month" id="month" />
           </div>
+
           <div class="col-4">
-            <label for="year">Year</label>
-            <input type="number" name="year" id="year" min="1" />
+            <label for="year">YEAR</label>
+            <input maxlength="4" name="year" id="year" min="1" />
           </div>
         </div>
-        <div class="horizontal-line"></div>
-        <div class="years"></div>
-        <div class="months"></div>
-        <div class="days"></div>
+        <!-- ******* -->
+
+        <!-- Button -->
+        <div class="horizontal-line d-flex align-items-center">
+          <div class="line"></div>
+          <button class="rounded-circle btn-round" id="submit-date">
+            <img src="assets/images/icon-arrow.svg" alt="Arrow icon" />
+          </button>
+        </div>
+        <!-- ******* -->
+
+        <!-- Output -->
+        <div class="big-text">
+          <span class="violet-text" id="years">--</span> years
+        </div>
+        <div class="big-text">
+          <span class="violet-text" id="months">--</span> month
+        </div>
+        <div class="big-text">
+          <span class="violet-text" id="days">--</span> days
+        </div>
+        <!-- ******* -->
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
