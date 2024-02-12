@@ -86,17 +86,19 @@ function calculateAge(birthDate) {
   let years = today.getFullYear() - birthDate.getFullYear();
   let months = today.getMonth() - birthDate.getMonth();
   let days = today.getDate() - birthDate.getDate();
-  console.log(days, months, years);
-  // If the current day is less than the birth day, we need to add 30 to the current day
+
+  // If the current day is less than the birth day, we need to add 30 to the current day and subtract 1 from the months
   if (days < 0) {
     days += 30;
     months--;
   }
-  // If the current month is less than the birth month, we need to add 12 to the current month
+
+  // If the current month is less than the birth month, we need to add 12 to the current month and subtract 1 from the years
   if (months < 0) {
     months += 12;
     years--;
   }
+
   let year = document.getElementById("years");
   year.textContent = years;
   let month = document.getElementById("months");
