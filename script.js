@@ -95,10 +95,6 @@ function calculateAge(birthDate) {
   // If the current month is less than the birth month, we need to add 12 to the current month
   if (months < 0) {
     months += 12;
-  }
-  // If the current month is less than the birth month, we need to subtract a year
-  // If the current month is equal to the birth month, but the current day is less than the birth day, we need to subtract a year
-  if (months < 0 || (months === 0 && days < 0)) {
     years--;
   }
   let year = document.getElementById("years");
