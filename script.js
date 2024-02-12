@@ -9,6 +9,15 @@ const yearWarning = document.getElementById("year-warning");
 const monthWarning = document.getElementById("month-warning");
 const dayWarning = document.getElementById("day-warning");
 
+const yearInput = document.getElementById("year");
+yearInput.addEventListener("keyup", function (event) {
+  console.log("event", event);
+  if (event.key === "Enter") {
+    event.preventDefault();
+    button.click();
+  }
+});
+
 button.addEventListener("click", () => {
   const monthInput = parseInt(document.getElementById("month").value);
   const yearInput = parseInt(document.getElementById("year").value);
